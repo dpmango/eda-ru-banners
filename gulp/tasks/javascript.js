@@ -5,53 +5,7 @@ import plumber from 'gulp-plumber';
 import concat from 'gulp-concat';
 import uglifyJs from 'gulp-uglify';
 import babel from 'gulp-babel';
-import webpack from 'webpack';
-import webpackStream from 'webpack-stream';
 import config from '../config';
-
-// TODO - move to webpack.config.js
-const webpackConfig = {
-  mode: config.production ? 'production' : 'development',
-  module: {
-    rules: [
-      {
-        test: require.resolve('jquery'),
-        use: [
-          {
-            loader: 'expose-loader',
-            options: 'jQuery',
-          },
-          {
-            loader: 'expose-loader',
-            options: '$',
-          },
-        ],
-      },
-    ],
-  },
-  // some jquery plugins doesnt work with expose-loader
-  // Try uncommenting below if nothing else helps
-  // plugins: [
-  //   new webpack.ProvidePlugin({
-  //     $: 'jquery',
-  //     jQuery: 'jquery',
-  //     'window.jQuery': 'jquery',
-  //   }),
-  // ],
-};
-
-const javascriptVendor = () =>
-  gulp
-    .src([config.src.js + '/vendor.js'])
-    .pipe(plumber({ errorHandler: config.errorHandler }))
-    .pipe(webpackStream(webpackConfig))
-    .pipe(concat('vendor.js'))
-    .pipe(
-      babel({
-        presets: ['@babel/preset-env'],
-      })
-    )
-    .pipe(gulp.dest(config.dest.js));
 
 const javascriptApp = () =>
   gulp
@@ -71,10 +25,9 @@ const javascriptApp = () =>
     .pipe(config.production ? uglifyJs() : util.noop())
     .pipe(gulp.dest(config.dest.js));
 
-const buildJavascript = () => gulp.parallel(javascriptVendor, javascriptApp);
+const buildJavascript = () => gulp.parallel(javascriptApp);
 
 const watch = () => () => {
-  gulp.watch([config.src.js + '/vendor.js'], javascriptVendor);
   gulp.watch(
     [
       config.src.js + '/vendor/**/*.js',

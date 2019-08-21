@@ -30,7 +30,6 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     app.initGlobalPlugins = function() {
       APP.Dev.Credentials.logCredentials();
       APP.Browser().methods.setBodyTags();
-      APP.Plugins.LegacySupport.init();
       APP.Plugins.AOS.init();
     };
 
