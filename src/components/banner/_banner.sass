@@ -9,16 +9,6 @@
   z-index: 1
   background: $colorGreen
   color: white
-  &--300x600
-    max-width: 300px
-    min-height: 600px
-  &--100x250
-    width: 100%
-    min-height: 250px
-  &--100x400
-    width: 100%
-    min-height: 400px
-
   &__wrapper
     margin: 0 auto
 
@@ -43,3 +33,36 @@
       margin-top: 0.5em
 
   &__bottom
+    display: flex
+    align-items: center
+  &__cart-img
+    img
+      max-width: 100%
+
+  &__brand-logo
+    img
+      max-width: 100%
+
+
+  // modify existing classes
+  &--300x600
+    max-width: 300px
+    min-height: 600px
+    .banner
+      &__bottom
+      &__cart-image
+      &__brang-logo
+  &--100x250
+    width: 100%
+    min-height: 250px
+    .banner
+      &__bottom
+      &__cart-image
+      &__brang-logo
+  &--100x400
+    width: 100%
+    min-height: 400px
+    .banner
+      &__bottom
+      &__cart-image
+      &__brang-logo
