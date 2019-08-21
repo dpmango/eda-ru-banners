@@ -3,3 +3,9 @@ ProjectTitle: Perekrestok
 PageList:
   - file: all-banners.html
     ready: 100
+  - file: 300.html
+    ready: 100
+  - file: 250.html
+    ready: 100
+  - file: 400.html
+    ready: 100

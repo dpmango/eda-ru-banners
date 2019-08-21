@@ -24,8 +24,6 @@ Task name          | Description
 `sass` 	         | compile .sass/.scss to .css. Included [postcss](https://github.com/postcss/postcss) for [autoprefixer](https://github.com/postcss/autoprefixer), flexbugs and other cool [plugins](https://github.com/postcss/postcss#plugins) you might add
 `pug`              | compile [pug](http://pug-js.com/) templates
 `javascript`       | combines vendor files and custom .js code into separate files
-`sprite:svg`       | create svg symbol sprites (monocolor and multicolor)
-`sprite:png`       | create png sprites
 `images`           | optimize, minify and clone images
 `server`           | run dev-server powered by [BrowserSync](https://www.browsersync.io/)
 `clean`            | remove `./dist` folder
