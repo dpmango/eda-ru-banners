@@ -1,20 +1,25 @@
 // Generate Duration && Delay
 [data-aos] {
-  @for $i from 1 through 60 {
-    body[data-aos-duration='#{$i * 50}'] &,
-    &[data-aos][data-aos-duration='#{$i * 50}'] {
-      transition-duration: #{$i * 50}ms;
-    }
+  @for $i from 1 through 15 {
+    // body[data-aos-duration='#{$i * 100}'] &,
+    // &[data-aos][data-aos-duration='#{$i * 100}'] {
+    //   transition-duration: #{$i * 100}ms;
+    // }
 
-    body[data-aos-delay='#{$i * 50}'] &,
-    &[data-aos][data-aos-delay='#{$i * 50}'] {
+    body[data-aos-delay='#{$i * 100}'] &,
+    &[data-aos][data-aos-delay='#{$i * 100}'] {
       transition-delay: 0s;
 
       &.aos-animate {
-        transition-delay: #{$i * 50}ms;
+        transition-delay: #{$i * 100}ms;
       }
     }
   }
+  body[data-aos-duration='400'] &,
+  &[data-aos][data-aos-duration='400'] {
+    transition-duration: 400ms;
+  }
+
 }
 
 [data-aos] {
