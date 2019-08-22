@@ -47,6 +47,8 @@
     margin: 0
     & + .banner__text
       margin-top: 0.5em
+    br
+      display: none
 
   &__bottom
     position: absolute
@@ -87,6 +89,8 @@
     width: 100%
     min-height: 250px
     .banner
+      &__background-image
+        width: 970px
       &__content
         padding-left: 190px
       &__text
@@ -120,3 +124,74 @@
         padding-top: 70px
         max-width: 335px
         padding-left: 15px
+
++r(970)
+  .banner
+    &__background-image
+      left: 0
+      transform: none
+    &--100x400
+      .banner
+        &__background-image
+          display: none
+        &__content
+          padding-top: 40px
+        &__text
+          font-size: 45px
+          line-height: 1.1
+          br.br-mobile
+            display: block
+
++r(768)
+  .banner
+    &--100x250
+      .banner
+        &__background-image
+          display: none
+        &__text
+          font-size: 28px
+          line-height: 1.1
+
++r(600)
+  .banner
+    &--100x250
+      .banner
+        &__background-image
+          display: none
+        &__content
+          padding-left: 30px
+          padding-top: 25px
+        &__text
+          font-size: 28px
+          line-height: 1.1
+          br.br-mobile
+            display: block
+        &__cart-img
+          max-width: 110px
+          margin: 0 0 -20px -7px
+        &__brand-logo
+          padding-top: 55px
+          max-width: 170px
+          padding-left: 15px
+    &--100x400
+      .banner
+        &__content
+          padding-left: 35px
+          padding-top: 25px
+          padding-right: 20px
+        &__text
+          font-size: 29px
+          line-height: 1.1
+          br.br-mobile
+            display: block
+        &__bottom
+          flex-direction: column-reverse
+          align-items: flex-start
+        &__cart-img
+          max-width: 170px
+          margin: 0 0 -30px -20px
+        &__brand-logo
+          padding-top: 55px
+          max-width: 260px
+          padding-left: 35px
+          padding-bottom: 5px
