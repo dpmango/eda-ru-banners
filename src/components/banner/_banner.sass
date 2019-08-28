@@ -65,11 +65,19 @@
     img
       max-width: 100%
 
-  &__brand-logo
+  &__bottom-wrapper
     flex: 1 1 auto
     width: 100%
+  &__brand-logo
+    // not relevant
+    // flex: 1 1 auto
     img
       max-width: 100%
+
+  &__copyright
+    font-size: 9px
+    line-height: 1.5
+    font-family: $systemFont
 
 
   // modify existing classes
@@ -82,9 +90,13 @@
         max-width: 115px
         margin: 0 0 -10px -7px
       &__brand-logo
-        padding-top: 50px
+        padding-top: 60px
         max-width: 165px
         padding-left: 5px
+      &__copyright
+        font-size: 7px
+        padding-left: 5px
+        padding-right: 10px
   &--100x250
     width: 100%
     min-height: 250px
@@ -101,9 +113,13 @@
         max-width: 175px
         margin-bottom: -30px
       &__brand-logo
-        padding-top: 95px
+        padding-top: 110px
         max-width: 260px
         padding-left: 20px
+      &__copyright
+        padding-left: 20px
+        br
+          display: none
   &--100x400
     width: 100%
     min-height: 400px
@@ -121,9 +137,15 @@
         margin-bottom: -30px
         margin-left: -5px
       &__brand-logo
-        padding-top: 70px
+        padding-top: 95px
         max-width: 335px
         padding-left: 15px
+      &__copyright
+        margin-top: 0.5em
+        font-size: 12px
+        padding-left: 15px
+        br
+          display: none
 
 +r(970)
   .banner
@@ -141,6 +163,11 @@
           line-height: 1.1
           br.br-mobile
             display: block
+        &__brand-logo
+          padding-top: 70px
+        &__copyright
+          font-size: 9px
+          margin-top: 0
 
 +r(768)
   .banner
@@ -151,6 +178,18 @@
         &__text
           font-size: 28px
           line-height: 1.1
+        &__brand-logo
+          padding-top: 95px
+        &__copyright
+          font-size: 7px
+          br
+            display: block
+    &--100x400
+      .banner
+        &__copyright
+          font-size: 7px
+          br
+            display: block
 
 +r(600)
   .banner
@@ -178,6 +217,9 @@
           padding-top: 55px
           max-width: 170px
           padding-left: 15px
+        &__copyright
+          padding-left: 15px
+
     &--100x400
       .banner
         &__content
@@ -192,12 +234,16 @@
         &__bottom
           flex-direction: column-reverse
           align-items: flex-start
+        &__bottom-wrapper
+          margin-bottom: -20px
         &__cart-img
           max-width: 170px
           margin: 0 0 -30px -20px
         &__brand-logo
           padding-top: 55px
-          max-width: 260px
+          max-width: 240px
           padding-left: 35px
           padding-bottom: 5px
           height: 100%
+        &__copyright
+          padding-left: 35px

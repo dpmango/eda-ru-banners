@@ -14,8 +14,8 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production",
-    "surge": "surge --project ./dist --domain edaru-banners.surge.sh",
-    "deploy": "gulp build --production && surge --project ./dist --domain edaru-banners.surge.sh"
+    "surge": "surge --project ./ --domain edaru-banners.surge.sh",
+    "deploy": "gulp build --production && surge --project ./ --domain edaru-banners.surge.sh"
   },
   "dependencies": {
     "aos": "^2.3.4",
