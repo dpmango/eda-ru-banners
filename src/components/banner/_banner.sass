@@ -11,7 +11,7 @@
   position: relative
   z-index: 1
   overflow: hidden
-  background: $colorGreen
+  background: #000000
   color: white
   &__wrapper
     margin: 0 auto
@@ -37,18 +37,20 @@
   &__content
     position: relative
     z-index: 2
-    padding: 35px
+    padding: 40px 20px 35px 35px
 
   &__text
     font-weight: 700
-    font-size: 40px
-    letter-spacing: +em(0.1, 40)
-    line-height: 1.05
+    font-size: 28px
+    line-height: 1.2
     margin: 0
     & + .banner__text
-      margin-top: 0.5em
+      margin-top: 0.35em
     br
       display: none
+    &--accent
+      font-size: 20px
+      color: $colorGreen
 
   &__bottom
     position: absolute
@@ -60,23 +62,21 @@
     z-index: 3
     display: flex
     align-items: center
-  &__cart-img
-    flex: 0 0 auto
-    img
-      max-width: 100%
 
   &__bottom-wrapper
     flex: 1 1 auto
     width: 100%
+    padding-left: 35px
+    padding-bottom: 25px
   &__brand-logo
-    // not relevant
-    // flex: 1 1 auto
     img
       max-width: 100%
 
   &__copyright
-    font-size: 9px
-    line-height: 1.5
+    color: $colorGreen
+    font-size: 13px
+    letter-spacing: em(-0.7, 13)
+    line-height: 1.2
     font-family: $systemFont
 
 
@@ -85,18 +85,11 @@
     max-width: 300px
     min-height: 600px
     .banner
-      &__bottom
-      &__cart-img
-        max-width: 115px
-        margin: 0 0 -10px -7px
       &__brand-logo
-        padding-top: 60px
-        max-width: 165px
-        padding-left: 5px
+        max-width: 195px
+        padding-bottom: 5px
       &__copyright
-        font-size: 7px
-        padding-left: 5px
-        padding-right: 10px
+        padding-right: 2px
   &--100x250
     width: 100%
     min-height: 250px
@@ -104,48 +97,47 @@
       &__background-image
         width: 970px
       &__content
-        padding-left: 190px
+        padding-left: 45px
       &__text
+        font-size: 32px
         & + .banner__text
-          margin-top: 0em
-      &__bottom
-      &__cart-img
-        max-width: 175px
-        margin-bottom: -30px
+          margin-top: 0.2em
+        &--accent
+          font-size: 22px
+      &__bottom-wrapper
+        padding-left: 45px
+        padding-bottom: 17px
       &__brand-logo
-        padding-top: 110px
-        max-width: 260px
-        padding-left: 20px
+        max-width: 240px
       &__copyright
-        padding-left: 20px
         br
           display: none
+          &.br-always
+            display: block
   &--100x400
     width: 100%
     min-height: 400px
     .banner
       &__content
         padding-top: 50px
-        padding-left: 190px
+        padding-left: 60px
       &__text
-        font-size: 54px
+        font-size: 42px
+        max-width: 380px
         & + .banner__text
-          margin-top: 0em
-      &__bottom
-      &__cart-img
-        max-width: 179px
-        margin-bottom: -30px
-        margin-left: -5px
+          margin-top: 0.1em
+        &--accent
+          font-size: 28px
+          max-width: 100%
+      &__bottom-wrapper
+        padding-left: 60px
       &__brand-logo
-        padding-top: 95px
-        max-width: 335px
-        padding-left: 15px
+        max-width: 240px
       &__copyright
-        margin-top: 0.5em
-        font-size: 12px
-        padding-left: 15px
         br
           display: none
+          &.br-always
+            display: block
 
 +r(970)
   .banner
@@ -210,9 +202,6 @@
           line-height: 1.1
           br.br-mobile
             display: block
-        &__cart-img
-          max-width: 110px
-          margin: 0 0 -20px -7px
         &__brand-logo
           padding-top: 55px
           max-width: 170px
@@ -236,9 +225,6 @@
           align-items: flex-start
         &__bottom-wrapper
           margin-bottom: -20px
-        &__cart-img
-          max-width: 170px
-          margin: 0 0 -30px -20px
         &__brand-logo
           padding-top: 55px
           max-width: 240px
