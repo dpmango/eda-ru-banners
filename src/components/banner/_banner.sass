@@ -144,6 +144,14 @@
     &__background-image
       left: 0
       transform: none
+    &--100x250
+      .banner
+        &__background-image
+          width: 100%
+        &__text
+          font-size: 30px
+          &--accent
+            font-size: 20px
     &--100x400
       .banner
         &__background-image
@@ -151,16 +159,21 @@
         &__content
           padding-top: 40px
         &__text
-          font-size: 45px
-          line-height: 1.1
-          br.br-mobile
+          font-size: 48px
+          max-width: 440px
+          & + .banner__text
+            margin-top: 0.3em
+          &--accent
+            font-size: 28px
+          br
             display: block
-        &__brand-logo
-          padding-top: 70px
+        &__bottom-wrapper
+          padding-bottom: 30px
         &__copyright
-          font-size: 9px
-          margin-top: 0
-
+          br
+            display: block
+            &:nth-child(1)
+              display: none
 +r(768)
   .banner
     &--100x250
@@ -169,19 +182,13 @@
           display: none
         &__text
           font-size: 28px
-          line-height: 1.1
-        &__brand-logo
-          padding-top: 95px
+          &--accent
+            font-size: 18px
         &__copyright
-          font-size: 7px
           br
             display: block
-    &--100x400
-      .banner
-        &__copyright
-          font-size: 7px
-          br
-            display: block
+            &:nth-child(1)
+              display: none
 
 +r(600)
   .banner
@@ -192,44 +199,34 @@
 
     &--100x250
       .banner
-        &__background-image
-          display: none
         &__content
-          padding-left: 30px
-          padding-top: 25px
+          padding: 30px 5px 0px 40px
         &__text
-          font-size: 28px
-          line-height: 1.1
           br.br-mobile
             display: block
+          & + .banner__text
+            margin-top: 0.35em
+        &__bottom-wrapper
+          padding-left: 40px
+          padding-bottom: 20px
         &__brand-logo
-          padding-top: 55px
-          max-width: 170px
-          padding-left: 15px
+          max-width: 200px
         &__copyright
-          padding-left: 15px
+          display: none
 
     &--100x400
       .banner
         &__content
-          padding-left: 35px
-          padding-top: 25px
-          padding-right: 20px
+          padding-left: 40px
         &__text
-          font-size: 29px
-          line-height: 1.1
+          font-size: 35px
           br.br-mobile
             display: block
-        &__bottom
-          flex-direction: column-reverse
-          align-items: flex-start
+          &--accent
+            font-size: 20px
         &__bottom-wrapper
-          margin-bottom: -20px
+          padding-left: 40px
         &__brand-logo
-          padding-top: 55px
-          max-width: 240px
-          padding-left: 35px
-          padding-bottom: 5px
-          height: 100%
+          max-width: 215px
         &__copyright
-          padding-left: 35px
+          display: none
